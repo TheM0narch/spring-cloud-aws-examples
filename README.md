@@ -7,13 +7,13 @@ easier by providing examples. The library is compatible with Java 17 and above a
 
 | AWS Service                                                                                                                                           |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [SQS]()                        |
-| [SNS]()                        |
-| [SES]()                        |
-| [S3]()                          |
-| [DynamoDB]()              |
-| [Parameter Store]() |
-| [Cognito Security]()       |
+| [SQS](https://github.com/TheM0narch/spring-cloud-aws-examples/tree/main/src/main/java/com/springcloud/aws/examples/sqs)                        |
+| [SNS](https://github.com/TheM0narch/spring-cloud-aws-examples/tree/main/src/main/java/com/springcloud/aws/examples/sns)                        |
+| [SES](https://github.com/TheM0narch/spring-cloud-aws-examples/tree/main/src/main/java/com/springcloud/aws/examples/ses)                        |
+| [S3](https://github.com/TheM0narch/spring-cloud-aws-examples/tree/main/src/main/java/com/springcloud/aws/examples/s3)                          |
+| [DynamoDB](https://github.com/TheM0narch/spring-cloud-aws-examples/tree/main/src/main/java/com/springcloud/aws/examples/dynamodb)              |
+| [Parameter Store](https://github.com/TheM0narch/spring-cloud-aws-examples/tree/main/src/main/java/com/springcloud/aws/examples/parameterstore) |
+| [Cognito Security](https://github.com/TheM0narch/spring-cloud-aws-examples/tree/main/src/main/java/com/springcloud/aws/examples/cognito)       |
 
 ## Prerequisites
 ### AWS Account
@@ -175,7 +175,7 @@ Prerequisite:
 ### Ses
 Prerequisite:
 1. Subscribe both the sender and receiver emails from aws console
-2. Add the emails to the `.setTo()` and `setFrom()` methods inside the [MailSendingService]()
+2. Add the emails to the `.setTo()` and `setFrom()` methods inside the [MailSendingService](https://github.com/TheM0narch/spring-cloud-aws-examples/blob/main/src/main/java/com/springcloud/aws/examples/ses/service/MailSendingService.java)
 
 **Rest:**
 
