@@ -1,0 +1,48 @@
+server:
+    port: 8081
+
+logging:
+    level:
+        io:
+            awspring:
+                cloud: debug
+
+spring:
+    cloud:
+        aws:
+            credentials:
+                access-key: "accessKey"
+                secret-key: "secretAccessKey"
+            region:
+                static: eu-central-1
+    config: # required for parameter store
+        import: aws-parameterstore:/spring-cloud-aws-examples/
+# Example of multiple imports of different parameters stores
+#       import[0]: spring.config.import[1]=aws-parameterstore=/config0
+#       import[1]: spring.config.import[1]=aws-parameterstore=/config1
+
+    security:
+        oauth2:
+            resourceserver:
+                jwt:
+                    issuer-uri: "issuer-url"
+
+application:
+    aws:
+        sqsProperties:
+            maxMessagesPerPoll: 1
+            messageVisibility: 1
+            pollTimeout: 5
+            maxConcurrentMessages: 1
+            maxDelayBetweenPolls: 10
+            messageGroupId: 1
+            queueName: queueforjava.fifo
+        s3:
+            bucket: tsetsi-movie-bucket
+            apiCallAttemptTimeout: 10
+            apiCallTimeout: 10
+        sns:
+            apiCallAttemptTimeout: 10
+            apiCallTimeout: 10
+            arn: "arn"
+
